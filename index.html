@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B1E16" />
+  <meta name="description" content="Jessica M. Quintana, PhD, MPA — Healthcare Operations Executive trusted by payors for 15+ years. Provider network strategy, clinical operations, payer relations, account management, and enterprise P&L leadership." />
+  <title>Jessica M. Quintana, PhD, MPA | Healthcare Operations Executive</title>
+
+  <!-- Favicon placeholder (replace with your real icon files when ready) -->
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Social preview (update yourdomain.com after launch) -->
+  <meta property="og:title" content="Jessica M. Quintana, PhD, MPA | Healthcare Operations Executive" />
+  <meta property="og:description" content="Trusted by payors for 15+ years through payor relationship leadership, account management, and enterprise execution." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:image" content="https://yourdomain.com/assets/headshot.png" />
+
+  <style>
+    /* =========================
+       BOLD DARK-GREEN + EARTH TONE THEME
+       ========================= */
+    :root{
+      --bg0:#07130F;      /* deep bark */
+      --bg1:#0B1E16;      /* bark green */
+      --bg2:#10271D;      /* deep evergreen */
+      --ink:#0E1A16;      /* near-black green */
+      --text:#12211C;     /* primary text */
+      --text2:#1C322B;    /* secondary */
+      --muted:#6E857C;    /* muted earth */
+      --soft:#F5F3EE;     /* warm off-white */
+      --card:#FFFFFF;
+      --moss:#1E7A5A;     /* bold emerald */
+      --moss2:#2BAA7C;    /* brighter accent */
+      --gold:#C4A46A;     /* earth gold */
+      --sand:#E6D9C5;     /* sand */
+      --line: rgba(18,33,28,0.12);
+      --line2: rgba(255,255,255,0.12);
+      --shadow: 0 14px 40px rgba(0,0,0,0.14);
+      --shadow2: 0 18px 70px rgba(0,0,0,0.22);
+      --radius: 16px;
+      --max: 1160px;
+
+      --h1: clamp(30px, 3.8vw, 48px);
+      --h2: clamp(22px, 3.0vw, 36px);
+      --h3: 20px;
+      --body: 16px;
+      --lead: 18px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--soft);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img{ max-width:100%; display:block; }
+    a{ color: var(--moss); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    code{ background: rgba(30,122,90,0.10); padding: 2px 6px; border-radius: 8px; }
+
+    .container{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    /* Tap targets */
+    button, a.btn, .site-nav a{
+      min-height: 44px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Skip link */
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top: 8px;
+      background:#fff;
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      border-radius: 12px;
+      z-index: 9999;
+    }
+    .skip-link:focus{ left: 12px; }
+
+    /* =========================
+       HEADER (mobile-first)
+       ========================= */
+    .site-header{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(245,243,238,0.86);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height: 66px;
+      gap: 12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration:none;
+    }
+    .brand:hover{ text-decoration:none; }
+    .brand-mark{
+      width: 40px;
+      height: 40px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: #fff;
+      border-radius: 14px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .brand-name{
+      font-weight: 750;
+      letter-spacing: 0.2px;
+      font-size: 15px;
+      line-height: 1.2;
+    }
+    .brand-sub{
+      display:block;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 650;
+      margin-top: 2px;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-toggle{
+      display:inline-grid;
+      place-items:center;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #fff;
+      cursor:pointer;
+    }
+    .nav-toggle span{
+      display:block;
+      height: 2px;
+      width: 22px;
+      margin: 2.5px 0;
+      background: var(--ink);
+      border-radius: 999px;
+    }
+
+    .site-nav{
+      position: absolute;
+      right: 14px;
+      top: 66px;
+      width: min(360px, calc(100% - 28px));
+      background: rgba(255,255,255,0.98);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 10px;
+      display:none;
+      flex-direction:column;
+      gap: 6px;
+    }
+    .site-nav.open{ display:flex; }
+    .site-nav a{
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration:none;
+      padding: 10px 12px;
+      border-radius: 14px;
+    }
+    .site-nav a:hover{
+      background: rgba(30,122,90,0.08);
+      text-decoration:none;
+    }
+    .nav-cta{
+      background: linear-gradient(135deg, var(--bg1), var(--moss));
+      color:#fff !important;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .nav-cta:hover{
+      background: linear-gradient(135deg, var(--bg2), var(--moss2)) !important;
+    }
+
+    /* Desktop nav */
+    @media (min-width: 900px){
+      .nav-toggle{ display:none; }
+      .site-nav{
+        position: static;
+        width: auto;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        display:flex !important;
+        flex-direction:row;
+        gap: 14px;
+        align-items:center;
+      }
+      .site-nav a{
+        padding: 10px 10px;
+      }
+      .brand-name{ font-size: 16px; }
+    }
+
+    /* =========================
+       HERO (bold, graphic)
+       ========================= */
+    .hero{
+      background:
+        radial-gradient(900px 500px at 15% 0%, rgba(30,122,90,0.28), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(196,164,106,0.22), transparent 55%),
+        linear-gradient(180deg, var(--soft) 0%, #fff 70%);
+      padding: 28px 0 0 0;
+      overflow:hidden;
+      position: relative;
+    }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items:center;
+      padding: 20px 0 18px;
+    }
+
+    @media (min-width: 980px){
+      .hero-inner{
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 40px;
+        padding: 36px 0 22px;
+      }
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--bg2);
+      font-weight: 900;
+      background: rgba(196,164,106,0.18);
+      border: 1px solid rgba(196,164,106,0.28);
+      padding: 8px 12px;
+      border-radius: 999px;
+      width: fit-content;
+    }
+
+    .hero h1{
+      font-size: var(--h1);
+      line-height: 1.05;
+      margin: 12px 0 10px 0;
+      letter-spacing: -0.8px;
+      color: var(--ink);
+    }
+
+    .hero-sub{
+      font-size: clamp(16px, 1.7vw, 19px);
+      color: var(--text2);
+      margin: 0 0 16px 0;
+      max-width: 70ch;
+    }
+
+    /* “Healthcare graphics” ribbon (no external assets needed) */
+    .icon-ribbon{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin: 10px 0 12px;
+    }
+    .icon-chip{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--bg2);
+      background: rgba(30,122,90,0.08);
+      border: 1px solid rgba(30,122,90,0.16);
+      padding: 9px 11px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .icon-chip .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, var(--moss), var(--moss2));
+      box-shadow: 0 6px 18px rgba(30,122,90,0.26);
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      margin: 0 0 10px 0;
+    }
+    @media (min-width: 520px){
+      .hero-actions{ flex-direction:row; flex-wrap:wrap; }
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      border-radius: 14px;
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      background:#fff;
+      color: var(--ink);
+      font-weight: 850;
+      text-decoration:none;
+      cursor:pointer;
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--bg1), var(--moss));
+      border-color: rgba(0,0,0,0.06);
+      color:#fff;
+      box-shadow: 0 16px 40px rgba(7,19,15,0.26);
+    }
+    .btn.primary:hover{ background: linear-gradient(135deg, var(--bg2), var(--moss2)); text-decoration:none; }
+    .btn.secondary{
+      background: rgba(30,122,90,0.08);
+      border-color: rgba(30,122,90,0.20);
+      color: var(--bg2);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+    }
+    .btn.secondary:hover{ background: rgba(30,122,90,0.12); text-decoration:none; }
+
+    /* Headshot frame */
+    .headshot-frame{
+      border-radius: 22px;
+      overflow:hidden;
+      box-shadow: var(--shadow2);
+      border: 1px solid rgba(18,33,28,0.10);
+      background:#fff;
+    }
+
+    /* Trust strip */
+    .trust-strip{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .trust-pill{
+      font-size: 13px;
+      font-weight: 850;
+      color: #fff;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 9px 12px;
+      border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+    }
+    .micro-proof{
+      margin: 10px 0 0 0;
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 70ch;
+      font-weight: 650;
+    }
+
+    /* Metrics */
+    .metrics{
+      margin-top: 18px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+    .metrics-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 16px 0;
+    }
+    @media (min-width: 640px){
+      .metrics-grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 980px){
+      .metrics-grid{ grid-template-columns: repeat(5, 1fr); }
+    }
+    .metric{
+      border: 1px solid rgba(30,122,90,0.14);
+      background: linear-gradient(180deg, rgba(30,122,90,0.06), rgba(196,164,106,0.05));
+      border-radius: 16px;
+      padding: 14px 14px;
+    }
+    .metric-value{
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.4px;
+      color: var(--bg2);
+    }
+    .metric-label{
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+      font-weight: 650;
+    }
+
+    /* =========================
+       SECTIONS
+       ========================= */
+    .section{ padding: 56px 0; }
+    @media (min-width: 900px){
+      .section{ padding: 92px 0; }
+    }
+
+    .section-soft{
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(30,122,90,0.16), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(196,164,106,0.16), transparent 55%),
+        var(--soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-header{ margin-bottom: 26px; }
+    .section-header.center{
+      text-align:center;
+      max-width: 920px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .section-header h2{
+      font-size: var(--h2);
+      line-height: 1.15;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+    }
+    .subtitle{
+      font-size: 12px;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      color: var(--bg2);
+      margin: 0 0 10px 0;
+      font-weight: 900;
+    }
+    .lead{
+      font-size: clamp(16px, 1.6vw, 19px);
+      color: var(--text2);
+      margin: 10px auto 0 auto;
+      max-width: 92ch;
+      font-weight: 650;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px){
+      .two-col{ grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+    .grid-3{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px){
+      .grid-3{ grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    }
+    .grid-4{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px){
+      .grid-4{ grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid rgba(18,33,28,0.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    @media (min-width: 900px){
+      .card{ padding: 26px; }
+    }
+    .card h3{ margin: 0 0 10px 0; font-size: var(--h3); letter-spacing:-0.2px; color: var(--ink); }
+    .card p{ margin: 10px 0; }
+    .muted{ color: var(--muted); }
+
+    .highlight{
+      background:
+        radial-gradient(700px 360px at 20% 10%, rgba(30,122,90,0.14), transparent 55%),
+        radial-gradient(700px 360px at 90% 0%, rgba(196,164,106,0.14), transparent 55%),
+        #fff;
+      border-color: rgba(30,122,90,0.18);
+    }
+
+    /* Checklist */
+    .checklist{ list-style:none; padding:0; margin: 0; }
+    .checklist li{
+      position:relative;
+      padding-left: 26px;
+      margin: 10px 0;
+      font-weight: 650;
+      color: var(--text2);
+    }
+    .checklist li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      color: var(--moss);
+      font-weight: 900;
+    }
+
+    /* “Graphics” rows inside cards */
+    .capabilities{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .cap{
+      display:flex;
+      align-items:flex-start;
+      gap: 12px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(30,122,90,0.14);
+      background: rgba(30,122,90,0.05);
+    }
+    .cap-ico{
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(135deg, var(--bg1), var(--moss));
+      color:#fff;
+      font-weight: 900;
+      flex: 0 0 auto;
+      box-shadow: 0 10px 24px rgba(7,19,15,0.18);
+    }
+    .cap strong{ display:block; font-weight: 900; color: var(--ink); }
+    .cap span{ color: var(--text2); font-weight: 650; font-size: 14px; }
+
+    /* Callouts */
+    .callout{
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(196,164,106,0.12);
+      border: 1px solid rgba(196,164,106,0.28);
+      color: var(--ink);
+      font-weight: 850;
+    }
+
+    .case-header{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      align-items:flex-start;
+      justify-content:space-between;
+    }
+    @media (min-width: 640px){
+      .case-header{ flex-direction:row; align-items:center; }
+    }
+    .tag{
+      font-size: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(30,122,90,0.10);
+      border: 1px solid rgba(30,122,90,0.20);
+      color: var(--bg2);
+      font-weight: 900;
+      white-space:nowrap;
+    }
+
+    /* Trust framework */
+    .trust-card{
+      background: #fff;
+      border: 1px solid rgba(18,33,28,0.10);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .trust-top{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .trust-ico{
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color:#fff;
+      font-weight: 900;
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+    .trust-card h3{ margin:0; }
+    .accent{
+      height: 4px;
+      width: 48px;
+      background: linear-gradient(90deg, var(--moss), var(--gold));
+      border-radius: 999px;
+      margin: 10px 0 14px;
+    }
+    .trust-card ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text2);
+      font-size: 15px;
+      font-weight: 650;
+    }
+    .trust-card li{ margin: 8px 0; }
+    .italic{
+      margin-top: 12px;
+      font-size: 14px;
+      font-style: italic;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    /* Recruiters prefs */
+    .prefs{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    @media (min-width: 720px){
+      .prefs{ grid-template-columns: 1fr 1fr; }
+    }
+    .k{ color: var(--muted); font-weight: 900; }
+
+    /* Contact (mailto) */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 900px){
+      .contact-grid{ grid-template-columns: 0.95fr 1.05fr; gap: 20px; }
+    }
+
+    .contact-actions{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    @media (min-width: 520px){
+      .contact-actions{ flex-direction:row; flex-wrap:wrap; }
+    }
+    .contact-note{
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    /* Footer */
+    .site-footer{
+      border-top: 1px solid var(--line);
+      padding: 26px 0;
+      background: #fff;
+    }
+    .footer-inner{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      align-items:flex-start;
+      justify-content:space-between;
+    }
+    @media (min-width: 720px){
+      .footer-inner{ flex-direction:row; align-items:center; }
+    }
+    .footer-brand{ font-weight: 950; color: var(--ink); }
+    .footer-sub{ color: var(--muted); font-size: 14px; font-weight: 650; }
+
+    /* Modals (optional insights) */
+    .modal{
+      position: fixed;
+      inset: 0;
+      background: rgba(7,19,15,0.68);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding: 18px;
+    }
+    .modal.open{ display:flex; }
+    .modal-card{
+      width: min(720px, 100%);
+      background:#fff;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 22px 70px rgba(0,0,0,0.30);
+      padding: 22px;
+      position:relative;
+    }
+    .modal-close{
+      position:absolute;
+      right: 12px;
+      top: 10px;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background:#fff;
+      font-size: 22px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark">JQ</span>
+        <span>
+          <span class="brand-name">Jessica M. Quintana, PhD, MPA</span>
+          <span class="brand-sub">Healthcare Operations Executive</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#trust">Why Payors Trust Me</a>
+        <a href="#impact">Impact</a>
+        <a href="#recruiters">Recruiters</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">Trusted by payors for 15+ years</div>
+          <h1>Enterprise Healthcare Operations Leader Driving Profitable Scale</h1>
+
+          <p class="hero-sub">
+            Healthcare operations executive trusted by payors for 15+ years, built through payor relationship leadership and account management that strengthens
+            confidence, performance alignment, and long-term partnership across Medicare, Medicaid, and Commercial markets.
+          </p>
+
+          <!-- Healthcare-related “graphics” that reflect your abilities (no external images required) -->
+          <div class="icon-ribbon" aria-label="Healthcare capability graphics">
+            <div class="icon-chip"><span class="dot"></span> Network Strategy</div>
+            <div class="icon-chip"><span class="dot"></span> Clinical Operations</div>
+            <div class="icon-chip"><span class="dot"></span> Payor Partnerships</div>
+            <div class="icon-chip"><span class="dot"></span> P&amp;L + MLR</div>
+            <div class="icon-chip"><span class="dot"></span> Compliance</div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#impact">View Executive Impact</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/jessica-quintana-phd-mpa-a68ba2a2/" target="_blank" rel="noreferrer">View LinkedIn</a>
+          </div>
+
+          <div class="trust-strip" role="note" aria-label="Trust statement">
+            <span class="trust-pill">Governance</span>
+            <span class="trust-pill">Performance</span>
+            <span class="trust-pill">Compliance</span>
+            <span class="trust-pill">Scale</span>
+          </div>
+
+          <p class="micro-proof">
+            Payor trust is earned through relationship leadership + account management anchored in transparent governance and measurable delivery.
+          </p>
+        </div>
+
+        <div class="hero-media">
+          <div class="headshot-frame">
+            <!-- Put your image at /assets/headshot.png OR change the path below -->
+            <img src="headshot.png" alt="Professional headshot of Jessica M. Quintana" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Metrics -->
+      <div class="metrics">
+        <div class="container metrics-grid" aria-label="Executive metrics">
+          <div class="metric"><div class="metric-value">$325M</div><div class="metric-label">Enterprise revenue scaled</div></div>
+          <div class="metric"><div class="metric-value">6M+</div><div class="metric-label">Covered lives supported</div></div>
+          <div class="metric"><div class="metric-value">8%</div><div class="metric-label">MLR improvement delivered</div></div>
+          <div class="metric"><div class="metric-value">15%+</div><div class="metric-label">EBITDA sustained</div></div>
+          <div class="metric"><div class="metric-value">1,900%</div><div class="metric-label">Provider network scaling</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="section">
+      <div class="container">
+        <div class="section-header center">
+          <h2>Enterprise Operator. Clinical Strategist. Growth Architect.</h2>
+          <p class="lead">
+            I translate payor strategy into scalable, profitable execution across complex, multi-state healthcare environments, where financial performance,
+            regulatory compliance, provider access, and member experience must operate in alignment.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>Executive Summary</h3>
+            <p>
+              Enterprise healthcare operations executive with 15+ years of experience driving national growth, margin performance, and operational scale across
+              Medicare, Medicaid, and Commercial lines of business. Proven record of building provider networks, optimizing clinical operations, and leading enterprise
+              P&amp;L with measurable results.
+            </p>
+
+            <!-- Healthcare graphics inside the card -->
+            <div class="capabilities" aria-label="Healthcare capability graphics">
+              <div class="cap">
+                <div class="cap-ico">🏥</div>
+                <div><strong>Healthcare Ecosystems</strong><span>National payer/provider partnerships across multi-state markets.</span></div>
+              </div>
+              <div class="cap">
+                <div class="cap-ico">📊</div>
+                <div><strong>Performance Governance</strong><span>KPI/SLA scorecards, executive visibility, measurable outcomes.</span></div>
+              </div>
+              <div class="cap">
+                <div class="cap-ico">🧠</div>
+                <div><strong>Operational Intelligence</strong><span>AI-enabled workflows to improve speed, accuracy, and scale.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Core Focus Areas</h3>
+            <ul class="checklist">
+              <li>Provider Network Management &amp; Development</li>
+              <li>Clinical Operations Oversight &amp; Utilization Management</li>
+              <li>Payor Relations, Client Success &amp; Account Management</li>
+              <li>Enterprise P&amp;L, MLR optimization, and margin improvement</li>
+              <li>RFP strategy, pricing architecture, and go-to-market execution</li>
+              <li>KPI/SLA governance, regulatory compliance, and operational readiness</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card highlight" style="margin-top:16px;">
+          <h3>Payor Partnership &amp; Account Management</h3>
+          <p>
+            My 15+ years of payor trust has been earned through relationship leadership and account management built on transparency, performance governance,
+            and consistent delivery. I align stakeholders across clinical, financial, and operational priorities to strengthen partnership, retention, and growth.
+          </p>
+          <ul class="checklist">
+            <li>Executive-level stakeholder management and payer alignment</li>
+            <li>Governance cadence that strengthens partnership and confidence</li>
+            <li>RFP strategy, pricing architecture, and operational readiness</li>
+            <li>Multi-state execution that protects access, quality, and margin</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section id="trust" class="section section-soft">
+      <div class="container">
+        <div class="section-header center">
+          <h2>Why Payors Trust Me</h2>
+          <p class="subtitle">Trust Framework</p>
+          <p class="lead">
+            For more than 15 years, national and regional payors have trusted my leadership because I build durable, high-trust partnerships through strong
+            relationship management, disciplined account governance, and consistent execution, where financial performance, compliance, provider access, and
+            member experience must operate in alignment.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="trust-card">
+            <div class="trust-top">
+              <div class="trust-ico">🛡️</div>
+              <h3>Governance</h3>
+            </div>
+            <div class="accent"></div>
+            <ul>
+              <li>Enterprise ownership and accountability</li>
+              <li>KPI/SLA cadence and escalation clarity</li>
+              <li>Payor-facing transparency and reporting</li>
+            </ul>
+            <p class="italic">Trust starts with disciplined governance.</p>
+          </article>
+
+          <article class="trust-card">
+            <div class="trust-top">
+              <div class="trust-ico">📈</div>
+              <h3>Performance</h3>
+            </div>
+            <div class="accent"></div>
+            <ul>
+              <li>Revenue growth and margin sustainability</li>
+              <li>MLR improvement through operational rigor</li>
+              <li>Outcome-focused delivery at scale</li>
+            </ul>
+            <p class="italic">Trust is earned through measurable performance.</p>
+          </article>
+
+          <article class="trust-card">
+            <div class="trust-top">
+              <div class="trust-ico">✅</div>
+              <h3>Compliance</h3>
+            </div>
+            <div class="accent"></div>
+            <ul>
+              <li>Regulatory-aligned operations</li>
+              <li>Audit-ready workflows and controls</li>
+              <li>Risk mitigation embedded in execution</li>
+            </ul>
+            <p class="italic">Payors stay loyal when risk is managed proactively.</p>
+          </article>
+
+          <article class="trust-card">
+            <div class="trust-top">
+              <div class="trust-ico">🧩</div>
+              <h3>Scale</h3>
+            </div>
+            <div class="accent"></div>
+            <ul>
+              <li>Multi-state readiness and expansion</li>
+              <li>Provider network scaling systems</li>
+              <li>Infrastructure that sustains growth</li>
+            </ul>
+            <p class="italic">Scale matters only when it’s sustainable.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact" class="section">
+      <div class="container">
+        <div class="section-header center">
+          <h2>Signature Impact Areas</h2>
+          <p class="lead">Where I create enterprise value, fast, measurable, and durable.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Provider Network Strategy &amp; Development</h3>
+            <div class="capabilities">
+              <div class="cap">
+                <div class="cap-ico">🧑‍⚕️</div>
+                <div><strong>Network Adequacy</strong><span>Build and optimize access with sustainable provider supply.</span></div>
+              </div>
+              <div class="cap">
+                <div class="cap-ico">🗂️</div>
+                <div><strong>Credentialing at Scale</strong><span>Streamline onboarding while protecting compliance.</span></div>
+              </div>
+            </div>
+            <p class="callout">Result: Provider onboarding SLA compliance improved by 15%.</p>
+          </article>
+
+          <article class="card">
+            <h3>Clinical &amp; Healthcare Operations Oversight</h3>
+            <div class="capabilities">
+              <div class="cap">
+                <div class="cap-ico">🩺</div>
+                <div><strong>UM + Clinical Controls</strong><span>Clinically grounded workflows that protect access and cost.</span></div>
+              </div>
+              <div class="cap">
+                <div class="cap-ico">📉</div>
+                <div><strong>MLR Optimization</strong><span>Improve margin through disciplined operations + analytics.</span></div>
+              </div>
+            </div>
+            <p class="callout">Result: 8% MLR improvement across 6M+ covered lives.</p>
+          </article>
+
+          <article class="card">
+            <h3>Payor Relations, Client Success &amp; Growth</h3>
+            <div class="capabilities">
+              <div class="cap">
+                <div class="cap-ico">🤝</div>
+                <div><strong>Executive Stakeholder Alignment</strong><span>High-trust partnerships rooted in transparency and delivery.</span></div>
+              </div>
+              <div class="cap">
+                <div class="cap-ico">🧾</div>
+                <div><strong>RFP + Pricing Strategy</strong><span>Win and retain business through readiness and value articulation.</span></div>
+              </div>
+            </div>
+            <p class="callout">Result: $10M+ new payer revenue enabled; payer engagement increased 3×.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECRUITERS -->
+    <section id="recruiters" class="section section-soft">
+      <div class="container">
+        <div class="section-header center">
+          <h2>For Recruiters, Boards, and Hiring Leaders</h2>
+          <p class="lead">
+            I am a healthcare operations executive trusted by payors for over 15 years, earned through payor relationship leadership and account management that
+            builds confidence, aligns performance to priorities, and delivers results at enterprise scale.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>Roles of Interest</h3>
+            <ul class="checklist">
+              <li>Executive Director, VP, SVP, COO</li>
+              <li>Healthcare Operations &amp; Clinical Operations Oversight</li>
+              <li>Provider Network Management / Development</li>
+              <li>Payor Relations, Client Success, Account Management</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Where I Fit Best</h3>
+            <ul class="checklist">
+              <li>National or multi-state healthcare organizations</li>
+              <li>Payers, TPAs, MSOs, provider-led platforms</li>
+              <li>Growth, scale, integration, or operational turnaround</li>
+              <li>Metrics-driven governance with executive accountability</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card highlight" style="margin-top:16px;">
+          <h3>Engagement Preferences</h3>
+          <div class="prefs">
+            <div><span class="k">Location:</span> Davie, FL (open to national scope)</div>
+            <div><span class="k">Work model:</span> Remote / Hybrid (limited onsite)</div>
+            <div><span class="k">Travel:</span> Up to ~20% domestic</div>
+            <div><span class="k">Confidentiality:</span> Confidential conversations welcomed</div>
+          </div>
+          <div class="contact-actions">
+            <a class="btn primary" href="#contact">Contact Me</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/jessica-quintana-phd-mpa-a68ba2a2/" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (mailto) -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header center">
+          <h2>Contact</h2>
+          <p class="lead">Click to email me using your email client.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Contact Details</h3>
+            <p><strong>Email:</strong> <a href="mailto:Jessicaq1110@gmail.com">Jessicaq1110@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+13054954686">305-495-4686</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jessica-quintana-phd-mpa-a68ba2a2/" target="_blank" rel="noreferrer">Profile</a></p>
+            <p class="muted">Confidential conversations welcomed.</p>
+          </div>
+
+          <div class="card highlight">
+            <h3>Send an Email</h3>
+            <p class="muted">
+              This button opens your default email application with a pre-filled subject line and message starter.
+            </p>
+
+            <!-- MAILTO CTA (no Formspree) -->
+            <div class="contact-actions">
+              <a class="btn primary"
+                 href="mailto:Jessicaq1110@gmail.com?subject=Executive%20Opportunity%20Inquiry%20%E2%80%94%20Jessica%20M.%20Quintana&body=Hi%20Jessica%2C%0D%0A%0D%0AI%20reviewed%20your%20site%20and%20would%20like%20to%20connect%20regarding%20a%20potential%20executive%20opportunity.%0D%0A%0D%0AOrganization%3A%0D%0ARole%3A%0D%0ALocation%2FWork%20Model%3A%0D%0ABest%20times%20to%20connect%3A%0D%0A%0D%0AThank%20you%2C%0D%0A%5BYour%20Name%5D">
+                Email Jessica
+              </a>
+
+              <a class="btn secondary" href="tel:+13054954686">Call Jessica</a>
+            </div>
+
+            <p class="contact-note">
+              Tip: If your email doesn’t open, ensure a default mail app is set (Windows: Settings → Apps → Default apps → Email).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-brand">Jessica M. Quintana, PhD, MPA</div>
+        <div class="footer-sub">Trusted by Payors. Proven at Scale.</div>
+      </div>
+      <div><a href="#top">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle (mobile-first)
+    const navToggle = document.querySelector('.nav-toggle');
+    const siteNav = document.querySelector('#site-nav');
+
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      siteNav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          if (siteNav.classList.contains('open')) {
+            siteNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // Close nav if tapping outside (mobile)
+      document.addEventListener('click', (e) => {
+        const isNavOpen = siteNav.classList.contains('open');
+        if (!isNavOpen) return;
+        const clickedInside = siteNav.contains(e.target) || navToggle.contains(e.target);
+        if (!clickedInside) {
+          siteNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      }, { passive: true });
+    }
+  </script>
+</body>
+</html>
